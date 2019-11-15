@@ -114,7 +114,7 @@ namespace RabbitsLifeCycle.Web.Api.Tests
             response.Value.Should().Be(rabbitsPair);
         }
 
-        [Theory(DisplayName = "Given 24 months we should have enough to give Santa Ernestina population (county in the state of São Paulo in Brazil) one Rabbit each hehehe Joking it should be 5896 ;) ")]
+        [Theory(DisplayName = "Given 24 months we should have enough to give Santa Ernestina population (county in the state of São Paulo in Brazil) one Rabbit each hehehe I am just joking it should be 5896 Rabbits ;) ")]
         [InlineData(24, 5896)]
         public async Task GivenTwentyFourMonthsWeShouldHaveThirteenPairsOfRabbits(int month, int rabbitsPair)
         {
