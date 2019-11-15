@@ -16,6 +16,14 @@ namespace RabbitsLifeCycle.Web.Api.Services
             {
                 return new OkObjectResult(await CalculateRabbitsByMonthAsync(month));
             }
+            catch (OverflowException e)
+            {
+                Console.WriteLine($"Overflow exception - Exception: {e}");
+                return new ObjectResult($"Sorry, We love Rabbits but the world does not support so many. You have created more than {long.MaxValue} Rabbits.")
+                {
+                    StatusCode = (int)HttpStatusCode.InternalServerError
+                };
+            }
             catch (Exception e)
             {
                 Console.WriteLine($"An unexpected error has occurred - Exception: {e}");
@@ -26,7 +34,7 @@ namespace RabbitsLifeCycle.Web.Api.Services
             }
         }
 
-        private async Task<int> CalculateRabbitsByMonthAsync(int month)
+        private async Task<object> CalculateRabbitsByMonthAsync(int month)
         {
             var rabbits = new List<RabbitBirthRegistration>();
 

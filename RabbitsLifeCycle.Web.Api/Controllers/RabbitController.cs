@@ -12,7 +12,7 @@ namespace RabbitsLifeCycle.Web.Api.Controllers
             _rabbitService = rabbitService;
         
         [HttpPost("count")]
-        public async Task<ObjectResult> CountAsync(int month) =>
+        public async Task<ObjectResult> CountAsync([FromBody]int month) =>
             await _rabbitService.CountAsync(month);
     }
 }
