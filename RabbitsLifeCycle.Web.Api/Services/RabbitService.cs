@@ -10,6 +10,9 @@ namespace RabbitsLifeCycle.Web.Api.Services
 {
     public class RabbitService : IRabbitService
     {
+        private const int TimeToMature = 3;
+        private const int BornRabbits = 2;
+
         public async Task<ObjectResult> CountAsync(int month)
         {
             try
@@ -38,13 +41,13 @@ namespace RabbitsLifeCycle.Web.Api.Services
         {
             var rabbits = new List<RabbitBirthRegistration>();
 
-            if (month < 0) // •	At any month before 0 there are no Rabbits in existence
+            if (month < 0) // At any month before 0 there are no Rabbits in existence
                 return 0;
 
-            if (month >= 0 || month <= 2) // • At month 0 there magically is 1 pair of Rabbits
-                rabbits.Add(new RabbitBirthRegistration(0, 2));
+            if (month >= 0 || month <= 2) // At month 0 there magically is 1 pair of Rabbits
+                rabbits.Add(new RabbitBirthRegistration(0, BornRabbits));
 
-            for (var i = 3; i <= month; i++)
+            for (var i = TimeToMature; i <= month; i++)
             {
                 var matureRabbits = rabbits.Where(w => w.MatureMonth <= i).ToList();
 
