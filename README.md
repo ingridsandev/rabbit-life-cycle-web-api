@@ -1,4 +1,4 @@
-👩‍💻 🐰 This repository is a demonstration of how I would build an api being a creative problem solver.
+👩‍💻 🐰 This repository is a demonstration of how I would build an API as a creative problem solver.
 
 
 **Api url:** [rabbit/count](https://l4egxw0ez4.execute-api.eu-west-1.amazonaws.com/Prod/api/rabbit/count)
