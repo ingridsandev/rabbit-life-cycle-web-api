@@ -1,0 +1,8 @@
+👩‍💻 🐰🐰 This repository is a demonstration of how I would build an api being a creative problem solver.
+
+
+**Api url:** [rabbit/count](https://l4egxw0ez4.execute-api.eu-west-1.amazonaws.com/Prod/api/rabbit/count)
+
+
+**Keywords:** C#, CSharp, DotNetCore, Xunit, FluentAssertions, Aws, LambdaFunction, S3Bucket, ApiGateway OOP, OverFlowException
+>**Author:** [Ingrid Alves dos Santos](https://www.linkedin.com/in/ingridalves/)
